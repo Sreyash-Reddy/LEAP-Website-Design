@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Nunito , sans-serif;/*Nunito, sans-serif*/
+}
+:root{
+    --percentage1 : 0;
+    --percentage2 : 0;
+}
+body{
+    background-color: #F8F8FB;/*F8F8FB*/
+}
+
+a{
+    text-decoration: none;
+}
+.blueBackground{
+    display: block;
+    z-index: -1;
+    position: absolute;
+    height: 57.5vh;
+    width: 100%;
+    background-color: #6E00FF;
+    border-radius: 0 0 0 38px;
+}
+.navBar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-right: 100px;
+}
+
+.category1{
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.navBar .category1 i{
+    font-size: 14px;
+    margin-left: 20%;
+    margin-top: 37px;    
+    color: #ffffffcc;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.navBar i:nth-child(2){
+    margin-left: 30px;
+}
+.navBar i:nth-child(3){
+    margin-left: 30px;
+}
+.navBar i:nth-child(4){
+    margin-left: 30px;
+}
+
+.navBar i:hover{
+    color: #ffffff;
+}
+
+/* #6107E0 */
+
+.navBarProfile{
+    display: flex;
+    margin-top: 28px;    
+    margin-left: calc(20% + 190px);
+    height: 30px;
+    width: 7.2%;
+    align-items: center;
+    background-color: #6107E0;
+    border-radius: 20px;
+}
+
+
+.navBarProfile h2{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #ffffffcc;
+}
+
+.navBarProfile i{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #ffffffcc;
+}
+
+.mainContent{
+    display: block;
+    z-index: 10;
+    min-height: 100vh;
+    background-color: transparent;
+    padding-left: 70px;
+    padding-right: 91px;
+    transition: margin-left 2s;
+}
+
+
+.activemainContent{
+    display: block;
+    z-index: 10;;
+    min-height: 100vh;
+    background-color: transparent;
+    margin-left: 21.5%;
+    padding-left: 70px;
+    padding-right: 100px;
+    transition: margin-left 2s;
+}
+.mainContent .userGreetingsName{
+    display: block;
+    padding-top: 110px;
+    font-size: 28px;
+    line-height: 38.4px;
+    color: #ffffff;
+    font-weight: 400;
+}
+.mainContent .userGreetings{
+    display: block;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #ffffffcc;
+    font-weight: 500;
+}
+.mainContent .row1{
+    display: flex;
+    margin-top: 28px;
+    background-color: transparent;
+}
+.mainContent .row1 .performancegraph{
+    height: 405px;
+    width: 913px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #55555563;
+    padding-bottom: 25px;
+    transition: width 2s;
+}
+.activemainContent .row1 .performancegraph{
+    width: 90%;
+    padding-bottom: 25px;
+}
+
+.performancegraph h1{
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.mainContent .performancegraph .performancegraphline{
+    position: absolute;
+    margin-top: 15px;
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+.activemainContent .performancegraph .performancegraphline{
+    height: 40%;
+    width: 40%;
+}
+.mainContent .row1 .previousExamMarksPercentage{
+    height: 405px;
+    width: 30%;
+    margin-left: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #55555563;
+}
+
+.activemainContent .row1 .previousExamMarksPercentage{
+    width: 41%;
+}
+
+.previousExamMarksPercentage .progressBar{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previousExamMarksPercentage h1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    color: #3C4858;
+}
+.previousExamMarksPercentage h2{
+    margin-top: -20px;
+    font-size: 15px;
+    text-align: center;
+    color: #8492A6;
+}
+.previousExamMarksPercentage h3{
+    margin-top: 0px;
+    font-size: 15px;
+    text-align: center;
+    color: #8492A6;
+}
+.previousExamMarksPercentage .progressBar .pathCircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #EEEEEE;
+    font-size: 25px;
+    color: #3C4858;
+}
+
+.previousExamMarksPercentage circle{
+    fill: none;
+    stroke: #FFAB00;
+    stroke-width: 11px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: progressBar1 1s linear forwards;
+}
+
+svg{
+    transform: rotate(-90deg);
+    position: absolute;
+}
+
+@keyframes progressBar1{
+    100%{
+        stroke-dashoffset: var(--percentage1);
+    }
+}
+
+.previousExamMarksPercentage .insights{
+    height: 50px;
+    width: 90%;
+    background-color: #EFF2F7;
+    margin-top: 15px;
+    margin-left: 5%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    transition: background-color 0.25s;
+}
+.previousExamMarksPercentage .insights:hover{
+    background-color: #D5DCE9;
+}
+
+.previousExamMarksPercentage .insights a{
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #3C4858;
+    font-weight: 600;
+}
+
+.mainContent .row2{
+    display: flex;
+    margin-top: 28px;
+    background-color: transparent;
+}
+
+
+.previousAttendancePercentage .progressBar{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previousAttendancePercentage h1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    color: #3C4858;
+}
+.previousAttendancePercentage h2{
+    margin-top: -20px;
+    font-size: 15px;
+    text-align: center;
+    color: #8492A6;
+}
+.previousAttendancePercentage h3{
+    margin-top: 0px;
+    font-size: 15px;
+    text-align: center;
+    color: #8492A6;
+}
+.previousAttendancePercentage .progressBar .pathCircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #EEEEEE;
+    font-size: 25px;
+    color: #3C4858;
+}
+
+.previousAttendancePercentage circle{
+    fill: none;
+    stroke: #6E00FF;
+    stroke-width: 11px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: progressBar2 1s linear forwards;
+}
+
+svg{
+    transform: rotate(-90deg);
+    position: absolute;
+}
+
+@keyframes progressBar2{
+    100%{
+        stroke-dashoffset: var(--percentage2);
+    }
+}
+
+.previousAttendancePercentage .insights{
+    height: 50px;
+    width: 90%;
+    background-color: #EFF2F7;
+    margin-top: 15px;
+    margin-left: 5%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    transition: background-color 0.25s;
+}
+
+
+.previousAttendancePercentage .insights:hover{
+    background-color: #D5DCE9;
+}
+
+.previousAttendancePercentage .insights a{
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #3C4858;
+    font-weight: 600;
+}
+
+.mainContent .row2{
+    display: flex;
+    margin-top: 28px;
+    background-color: transparent;
+}
+
+.mainContent .row2 .previousAttendancePercentage{
+    height: 405px;
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #55555563;
+}
+.activemainContent .row2 .previousAttendancePercentage{
+    width: 30%;
+}
+
+.mainContent .row2 .scheduledExams{
+    height: 405px;
+    width: 67.5%;
+    background-color: #ffffff;
+    margin-left: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #55555563;
+}
+.row2 .scheduledExams .scheduledExamTitle h1{
+    width: 100%;
+    text-align: center;
+    color: #3C4858;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.row2 .scheduledExams .scheduleExamList{
+    width: 90%;
+    height: 75%;
+    background-color: #3C4858;
+    margin-bottom: 25px;
+    margin-left: 5%;
+    border: 2px solid #3C4858;
+    overflow-y: scroll;
+}
+
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex{
+    z-index: 100;
+    width: 100%;
+    height: calc(100% / 4);
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px #55555563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex h1{
+    color: #3C4858;
+    font-size: 20px;
+    margin-left: 10px;
+    border-right: 2px solid #3C4858  ;
+    padding-right: 10px;
+}
+
+.scheduleExamListIndex .scheduleExamdateTime{
+    margin-left: 10px;
+}
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleExamdateTime h2,
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleExamBatchCourse h2{
+    color: #3C4858;
+    font-size: 15px;
+    margin-left: 10px;
+    border-right: 2px solid #3C4858  ;
+    padding-right: 10px;
+}
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleExamdateTime h3,
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleExamBatchCourse h3{
+    color: #3C4858;
+    font-size: 15px;
+    margin-left: 10px;
+    border-right: 2px solid #3C4858  ;
+    padding-right: 10px;
+}
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleDurationAndmarks h2{
+    color: #3C4858;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+.row2 .scheduledExams .scheduleExamList .scheduleExamListIndex .scheduleDurationAndmarks h3{
+    color: #3C4858;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.hero{
+    width: 89.2%;
+    margin-left: 4.6%;
+    margin-top: 28px;
+}
+
+
+.hero h1{
+    font-size: 25px;
+    padding-top: 20px;
+    /* padding-left: 20px; */
+    padding-bottom: 20px;
+    color: #3C4858;
+}
+
+.student-profile{
+    position: absolute;
+    width: 0;
+    height: 590px;
+    margin-left: 1%;
+    margin-top: 60vh;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #55555563;
+    visibility: hidden;
+    transition: width 1s;
+    display: flex;
+}
+
+.studentProfileInnerDiv{
+    visibility: hidden;
+    transition: 1s;
+    height: 90%;
+    margin-top: 5%;
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.studentProfileInnerDiv .studentProfileContents{
+    text-align: center;
+    font-size: 25px;
+    margin: 0 30px;
+    /* background-color: #3C4858; */
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6107E0;
+}
+
+.studentProfileContents:nth-child(2){
+    color: #ffffff;
+    background-color: #6E00FF;
+    border-radius: 10px;
+}
+.studentProfileContents:nth-child(2):hover{
+    color: #ffffff;
+    background-color: #6E00FF;
+    border-radius: 10px;
+}
+
+.studentProfileContents:nth-child(2) h1,
+.studentProfileContents:nth-child(2) i{
+    color: #ffffff;
+}
+
+
+.studentProfileContents:hover i{
+    color: #6E00FF;
+    font-size: 32px;
+}
+.studentProfileContents:hover h1{
+    color: #6E00FF;
+    font-size: 17px;
+}
+.studentProfileContents:nth-child(2):hover i{
+    color: #ffffff;
+    font-size: 28px;
+}
+.studentProfileContents:nth-child(2):hover h1{
+    color: #ffffff;
+    font-size: 15px;
+}
+.studentProfileInnerDiv h1{
+    font-size: 15px;
+    color: #8492A6;
+    margin-top: 10px;
+    transition: font-size 0.5s;
+}
+
+.studentProfileInnerDiv i{
+    color: #8492A6;
+    font-size: 28px;
+    transition: font-size .5s;
+}
+
+

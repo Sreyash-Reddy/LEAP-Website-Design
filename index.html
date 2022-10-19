@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student-Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="evo-calendar.orange-coral.css"/>
+        <link rel="stylesheet" type="text/css" href="evo-calendar.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="blueBackground"></div>
+        <div class="navBar">
+            <div class="category1">
+                <i class="fas fa-house-chimney"></i>
+                <i class="fas fa-bars" id="more"></i>
+                <i class="fas fa-magnifying-glass"></i>
+                <i class="far fa-bell"></i>
+            </div> 
+            <div class="navBarProfile">
+                <i class="far fa-user"></i>
+                <h2>Qwerty</h2>
+            </div>
+        </div>
+        <div class="student-profile">
+            <div class="studentProfileInnerDiv">
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fas fa-house-chimney"></i></div><h1>Home</h1></a>
+                </div>
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fa-solid fa-table-list"></i></div><h1>Dashboard</h1></a>
+                </div>
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fas fa-user-ninja"></i></div><h1>Profile</h1></a>
+                </div>
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fas fa-list-check"></i></div><h1>Marks</h1></a>
+                </div>
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fas fa-diagram-project"></i></div><h1>Assignments</h1></a>
+                </div>
+                <div class="studentProfileContents">
+                    <a href=""><div class="studentProfileLogo"><i class="fas fa-question"></i></div><h1>Queries</h1></a>
+                </div>
+            </div>
+        </div>
+        <div class="mainContent" id="mainContent">
+            <h1 class="userGreetingsName">Hello Qwerty!</h1>
+            <p class="userGreetings">Have a nice day!</p>
+            <div class="row1">
+                <div class="performancegraph">
+                    <h1>Cummalative Exam Performance</h1>
+                    <canvas id="performancegraphline" class="performancegraphline"></canvas>
+                </div>
+                <div class="previousExamMarksPercentage">
+                    <h1>Recent Exam Percentage</h1>
+                    <div class="progressBar">
+                        <div class="pathCircle">
+                            <span class="percentage" id="previousExamMarksPercentage"></span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version = "1.1" width="160px" height="160px">
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h2 id="examinationDate"></h2>
+                    <h3 id="marksObtained"></h3>
+                    <div class="insights">
+                        <a href="#">Open Insights</a>
+                    </div>
+                </div>        
+            </div>
+            <div class="row2">
+                
+                <div class="previousAttendancePercentage">
+                    <h1>Attendance Percentage</h1>
+                    <div class="progressBar">
+                        <div class="pathCircle">
+                            <span class="percentage" id="attendancePercentage"></span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version = "1.1" width="160px" height="160px">
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h2 id="attendedSessions"></h2>
+                    <h3 id="totalSessions"></h3>
+                    <div class="insights">
+                        <a href="#">Open Insights</a>
+                    </div>
+                </div>    
+                <div class="scheduledExams">
+                    <div class="scheduledExamTitle"><h1>Upcoming Exams</h1></div>
+                    <div class="scheduleExamList">
+                        <div class="scheduleExamListIndex">
+                            <h1>Assignment - 1</h1>
+                            <div class="scheduleExamdateTime">
+                                <h2>Date: 30-07-2022</h2>
+                                <h3>Time: 13:00</h3>
+                            </div>
+                            <div class="scheduleExamBatchCourse">
+                                <h2>Batch: 3 (2022 - 23)</h2>
+                                <h3>Course: M.P.C</h3>
+                            </div>
+                            <div class="scheduleDurationAndmarks">
+                                <h2>Duration: 30min</h2>
+                                <h3>Max Marks: 20</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        
+        <div class="hero">
+            <h1>Event Calendar</h1>
+            <div id="calendar"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="evo-calendar.js"></script>
+
+        <script>
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+                'language' : 'en',
+                'theme' : 'Orange Coral'
+            })
+        })
+        </script>
+        
+    </body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="main.js"></script>
+</html>
